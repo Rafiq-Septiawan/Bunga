@@ -15,6 +15,7 @@ body{
 .greetings{
     font-size: 6rem;
     font-weight: 900;
+    white-space: nowrap; /* Mencegah pemenggalan teks */
 }
 .greetings > span{
     animation: glow 2.5s ease-in-out infinite;
@@ -65,7 +66,6 @@ body{
     width: 1em; /* Sesuaikan dengan lebar spasi yang diinginkan */
 }
 
-
 .description{
     font-size: 1.5rem;
     margin-bottom: 20px;
@@ -79,10 +79,11 @@ body{
 
 @media screen and (max-width:574px){
     .greetings{
-        display: block;
         font-size: 3rem;
         font-weight: 500;
         text-align: center;
+        white-space: nowrap; /* Pastikan tidak ada pemenggalan baris */
+        overflow: hidden; /* Mencegah teks meluber */
     }
     .description{
         font-size: 1rem;
@@ -92,3 +93,4 @@ body{
         font-size: .5rem;
     }
 }
+
